@@ -1,0 +1,20 @@
+routes:
+  - path: /users
+    method: GET
+    response:
+      status_code: 200
+      content:
+        users:
+          - id: "{{ uuid4 }}"
+            name: "{{ name }}"
+            email: "{{ email }}"
+          - id: "{{ uuid4 }}"
+            name: "{{ name }}"
+            email: "{{ email }}"
+
+  - path: /auth
+    method: POST
+    response:
+      status_code: 401
+      content:
+        error: "Unauthorized access"
