@@ -9,8 +9,14 @@ repos:
     rev: v1.16.0
     hooks:
       - id: mypy
+        additional_dependencies: [ types-PyYAML ]
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.11.13
     hooks:
       - id: ruff-check
       - id: ruff-format
+  - repo: https://github.com/pycqa/isort
+    rev: 6.0.1
+    hooks:
+      - id: isort
+        name: isort (python)
